@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(200deg, #b85c38, #f3c892);
+}
+
+
+.scene {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    perspective: 1000px;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: quay 10s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 50px;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 6 mặt đèn */
+.face:nth-child(1) {
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.face:nth-child(2) {
+    transform: rotateY(60deg) translateZ(250px);
+}
+
+.face:nth-child(3) {
+    transform: rotateY(120deg) translateZ(250px);
+}
+
+.face:nth-child(4) {
+    transform: rotateY(180deg) translateZ(250px);
+}
+
+.face:nth-child(5) {
+    transform: rotateY(240deg) translateZ(250px);
+}
+
+.face:nth-child(6) {
+    transform: rotateY(300deg) translateZ(250px);
+}
+
+.carousel {
+    animation: quay 14s linear infinite;
+}
+
+.face img {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes quay {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
